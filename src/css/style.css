@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.game-board{
+    width: 100%;
+    height: 625px;
+    border-bottom: 15px solid rgb(122, 74, 1);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#dd8500, #7e0f0f);
+}
+
+.cano{
+    position: absolute;
+    bottom: 0;
+    width: 60px;
+    animation: cano-animation 1.75s infinite linear;
+}
+
+.metroid{
+    width: 150px;
+    position: absolute;
+    bottom: 0px;
+}
+
+.nuvem{
+    width: 190px;
+    position: absolute;
+    animation: nuvemAnimacao 10s infinite linear;
+}
+
+.jump{
+    animation: jump 700ms ease-out;
+}
+
+@keyframes cano-animation {
+    from{
+        right: -80px;
+    }
+
+    to{
+        right: 100%;
+    }
+}
+
+@keyframes jump {
+    0%{
+        bottom: 0;
+    }
+
+    40%{
+        bottom: 180px;
+    }
+
+    50%{
+        bottom: 180px;
+    }
+
+    60%{
+        bottom: 180px;
+    }
+
+    100%{
+        bottom: 0;
+    }
+}
+
+@keyframes nuvemAnimacao {
+    from{
+        right: -190px;
+    }
+
+    to{
+        right: 100%;
+    }
+}
